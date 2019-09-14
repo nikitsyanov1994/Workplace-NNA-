@@ -1,0 +1,150 @@
+#cakes {
+  background-image: url("../img/bgcake.jpg");
+  @include backgrdstyle;
+  padding: 100px 10px 100px 67px;
+  background-attachment: fixed;
+  position: relative;
+  border-top: solid 10px $menucolor;
+}
+.cakes__left-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.cakes__left {
+  padding: 0 70px;
+  text-align: center;
+  width: 50%;
+  &-heading {
+    .heading {
+      font-family: $fontheadinsbold;
+      font-size: 54px;
+      line-height: 100%;
+      letter-spacing: 0.1px;
+      color: $headingcakescolor;
+    }
+  }
+  &-subheading {
+    padding-bottom: 63px;
+    .subheading {
+      font-family: $fontheadinsbold;
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.1px;
+      color: $subheadingcakescolor;
+      font-weight: bold;
+      text-align: center;
+      word-wrap: break-word;
+    }
+  }
+  &-content {
+    padding-bottom: 40px;
+    .content {
+      @include textstyle;
+      letter-spacing: 0.9px;
+      color: $btncolorgradone;
+    }
+  }
+  &-infoteam {
+    padding-bottom: 40px;
+    .infotext {
+      padding-bottom: 45px;
+      font-family: $fontheadinsbold;
+      color: $btncolorgradone;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.25px;
+      font-weight: bold;
+    }
+  }
+  &-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-img {
+      padding: 0px 20px;
+    }
+    .first_name,
+    .second_name {
+      font-family: $fontheadings;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0.25px;
+      font-weight: 500;
+      width: 110px;
+      border-top: solid 1px $bordercolor;
+      border-bottom: solid 1px $bordercolor;
+      padding: 20px 0;
+      text-align: center;
+    }
+  }
+  .cakes__left-quote {
+    .quote {
+      @include logostyle;
+      letter-spacing: 0.1px;
+      color: $colorqoute;
+      max-width: 277px;
+      margin: 0 auto;
+      position: relative;
+      &:before {
+        @include quoteslyle;
+        content: "\e977";
+        top: -28px;
+        left: -47px;
+      }
+      &::after {
+        @include quoteslyle;
+        bottom: -28px;
+        right: -47px;
+      }
+    }
+  }
+}
+
+.cakes__right {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  &-flour,
+  &-egs,
+  &-chocolate,
+  &-Strawberry {
+    @include imagesframestyle;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .cakes__label-wrapper {
+    position: absolute;
+    display: block;
+    .label {
+      position: relative;
+      opacity: 0.95;
+      height: auto;
+      width: 100%;
+      display: block;
+      .lab {
+        display: block;
+      }
+    }
+    .textlabel {
+      width: 160px;
+      position: absolute;
+      word-wrap: break-word;
+      top: 35%;
+      right: 20%;
+      font-family: $fontheadings;
+      font-size: 30px;
+      line-height: 30px;
+      letter-spacing: 0.5px;
+      color: $labeltextcolor;
+      text-align: center;
+    }
+  }
+}

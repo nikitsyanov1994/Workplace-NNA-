@@ -1,0 +1,202 @@
+@media (max-width: 1200px) {
+    .header__top-wrap {
+      padding: 0px 30px;
+    }
+    #cakes {
+      padding: 100px 0px 100px 0px;
+    }
+  }
+  
+  
+  @media (max-width: 1130px) {
+    .header__top-wrap {
+      padding: 0px;
+    }
+    .header__top {
+      &__logo {
+        a {
+          font-size: 25px;
+        }
+      }
+      &__menu {
+        .menu__box {
+          li {
+            padding-right: 50px;
+            &:first-child,
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+              &::after {
+                right: 22px;
+              }
+            }
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .cakes-right{
+    margin-right: 70px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+   .header {
+     background-image: none;
+   }
+    .header__top {
+      &__logo {
+      }
+      &__menu {
+        order: -1;
+        .menu__btn {
+          display: flex; /* используем flex для центрирования содержимого */
+          align-items: center; /* центрируем содержимое кнопки */
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          width: 26px;
+          height: 26px;
+          cursor: pointer;
+          z-index: 4;
+        }
+        /* добавляем "гамбургер" */
+        .menu__btn > span,
+        .menu__btn > span::before,
+        .menu__btn > span::after {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $menucolor;
+        }
+        .menu__btn > span::before {
+          content: "";
+          top: -8px;
+        }
+        .menu__btn > span::after {
+          content: "";
+          top: 8px;
+        }
+        .menu__box {
+          z-index: 3;
+          display: block;
+          position: fixed;
+          visibility: hidden;
+          top: 0px;
+          width: 320px;
+          margin: 0;
+          padding: 50px 0;
+          list-style: none;
+          text-align: center;
+          background-color: gray;
+          box-shadow: 15px 15px 18px rgba(0, 0, 0, 0.2);
+          li {
+            padding-right: 50px;
+            &:first-child,
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+              &::after {
+                content: "";
+              }
+            }
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+        #menu__toggle:checked ~ .menu__btn > span {
+          transform: rotate(45deg);
+        }
+        #menu__toggle:checked ~ .menu__btn > span::before {
+          top: 0;
+          transform: rotate(0);
+        }
+        #menu__toggle:checked ~ .menu__btn > span::after {
+          top: 0;
+          transform: rotate(90deg);
+        }
+        #menu__toggle:checked ~ nav .menu__box {
+          visibility: visible;
+          left: 0;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 735px) {
+    .header__bottom-wrap {
+      padding: 200px 0 214px 0;
+    }
+    .header__bottom {
+      .header__bottom__name {
+        .heading {
+          font-size: 78px;
+        }
+      }
+    }
+  }
+  @media (max-width: 635px) {
+    .header__bottom-wrap {
+      padding: 180px 0 214px 0;
+    }
+    .header__bottom {
+      .header__bottom__name {
+        .heading {
+          font-size: 60px;
+        }
+      }
+      .header__bottom__text {
+        .text {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  @media (max-width: 510px) {
+    .header__bottom-wrap {
+      padding: 180px 0 214px 0;
+    }
+    .header__bottom {
+      .header__bottom__name {
+        .heading {
+          font-size: 40px;
+        }
+      }
+      .header__bottom__text {
+        .text {
+          font-size: 16px;
+          max-width: 350px;
+        }
+      }
+    }
+  }
+  @media (max-width: 371px) {
+    .header__top {
+      &__logo {
+        a {
+          font-size: 23px;
+        }
+      }
+    }
+    .header__bottom-wrap {
+      padding: 180px 0 214px 0;
+    }
+    .header__bottom {
+      .header__bottom__name {
+        .heading {
+          font-size: 28px;
+        }
+      }
+      .header__bottom__text {
+        .text {
+          font-size: 14px;
+          max-width: 350px;
+        }
+      }
+    }
+  }
+  
